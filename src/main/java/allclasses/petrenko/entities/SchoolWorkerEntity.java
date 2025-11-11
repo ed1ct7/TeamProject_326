@@ -12,14 +12,6 @@ public class SchoolWorkerEntity
     }
     private String FullName;
 
-    public double  getSalary() {
-        return Salary;
-    }
-    public void setSalary(double salary) {
-        Salary = salary;
-    }
-    private double  Salary;
-
     public String getPhone() {
         return Phone;
     }
@@ -31,10 +23,8 @@ public class SchoolWorkerEntity
     public Position getPosition() {
         return Position;
     }
-
     public void setPosition(Position position) {
         Position = position;
     }
-
     private Position Position;
 }
