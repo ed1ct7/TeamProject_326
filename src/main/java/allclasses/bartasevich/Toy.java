@@ -5,6 +5,7 @@ public class Toy {
     private  int ageLow;
     private int ageHigh;
     private float price;
+
     public Toy(){
        name = "Игрушка";
         ageLow = 1;
@@ -21,4 +22,6 @@ public class Toy {
     public String ToString(){
         return name + " от " + ageLow + " до " + ageHigh + " цена " + price;
     }
+
+
 }
