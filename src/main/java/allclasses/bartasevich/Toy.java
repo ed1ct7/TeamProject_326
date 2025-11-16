@@ -22,6 +22,10 @@ public class Toy {
     public String ToString(){
         return name + " от " + ageLow + " до " + ageHigh + " цена " + price;
     }
+    
+    public void PrintABOBA(){
+        print("Aboba")
+    }
 
 
 }
