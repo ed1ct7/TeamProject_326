@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.kazakova.Coffee;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        kazakova();
 
     }
 
@@ -26,5 +28,10 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void kazakova(){
+        Coffee coffee = new Coffee("Раф", 1);
+        System.out.println(coffee.getCoffee());
     }
 }
