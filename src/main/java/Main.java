@@ -32,6 +32,6 @@ public class Main {
 
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
-        System.out.println(coffee.getCoffee());
+        System.out.println("\nКазакова, "+ coffee.getCoffee());
     }
 }
