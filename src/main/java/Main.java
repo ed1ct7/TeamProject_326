@@ -1,4 +1,12 @@
 import allclasses.bartasevich.Toy;
+import allclasses.sadekov.ComputerComponent;
+import allclasses.sadekov.E_ComponentSpecs;
+import allclasses.sadekov.E_ComponentTypes;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,7 +17,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
-
+        sadekovMethod();
     }
 
     public static void tigranyan(){
@@ -26,5 +34,20 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void sadekovMethod(){
+        ComputerComponent component = new ComputerComponent();
+        component.PrintMainInfo();
+        component.PrintSpecsInfo();
+        ComputerComponent component1 = new ComputerComponent("NVIDIA GT 710", "Легенда, в описании не нуждается",
+                "Palit", 100.0, E_ComponentTypes.GraphicsCard, Map.of(E_ComponentSpecs.MemoryVolume, 1024.0));
+        component1.PrintMainInfo();
+        component1.PrintSpecsInfo();
+        component1.AddEditSpecInfo(E_ComponentSpecs.MemoryVolume, 2048.0);
+        component1.PrintSpecsInfo();
+        System.out.print(component1.CalculateFreeMemory(2047));
+        System.out.print("\n");
+        System.out.print(component1.GetRublePrice());
     }
 }
