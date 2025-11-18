@@ -18,12 +18,18 @@ public class Vector {
         this.y = y;
     }
 
+    public Vector() {
+        x = y = 0;
+    }
     public Vector(double x, double y) {
         this.x = x;
         this.y = y;
     }
-    
+
     public double getLength() {
         return Math.sqrt(x*x + y*y);
+    }
+    public String ToString() {
+        return "x="+this.getX()+" y="+this.getY()+" length="+this.getLength();
     }
 }

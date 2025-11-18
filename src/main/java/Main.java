@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.buldakov.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        buldakovMethod();
 
     }
 
@@ -26,5 +28,13 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+    public static void buldakovMethod() {
+        Vector vec1 = new Vector();
+        Vector vec2 = new Vector(1.5,2);
+        vec1.setX(4);
+        vec1.setY(3);
+        System.out.println("\nВектор 1: "+vec1.ToString());
+        System.out.println("Вектор 2: "+vec2.ToString());
     }
 }
