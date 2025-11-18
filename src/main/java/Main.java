@@ -12,7 +12,6 @@ import allclasses.buldakov.*;
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
-        tigranyan();
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
@@ -59,6 +58,8 @@ public class Main {
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
+    }
+
     public static void buldakovMethod() {
         Vector vec1 = new Vector();
         Vector vec2 = new Vector(1.5,2);
