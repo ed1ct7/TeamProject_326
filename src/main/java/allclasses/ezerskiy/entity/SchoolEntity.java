@@ -1,5 +1,7 @@
 package allclasses.ezerskiy.entity;
 
+import allclasses.petrenko.entities.SchoolWorkerEntity;
+
 import java.util.List;
 
 public class SchoolEntity
@@ -28,11 +30,11 @@ public class SchoolEntity
         Contacts = contacts;
     }
 
-    public List<String> getWorkers() {
+    public List<SchoolWorkerEntity> getWorkers() {
         return Workers;
     }
 
-    public void setWorkers(List<String> workers) {
+    public void setWorkers(List<SchoolWorkerEntity> workers) {
         Workers = workers;
     }
 
@@ -63,7 +65,7 @@ public class SchoolEntity
     private String Name;
     private String Address;
     private List<String> Contacts;
-    private List<String> Workers;
+    private List<SchoolWorkerEntity> Workers;
     private List<String> Students;
     private Double Area;
     private Integer NumberOfClassrooms;
