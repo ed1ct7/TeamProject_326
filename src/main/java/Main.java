@@ -37,6 +37,8 @@ public class Main {
     }
 
     public static void sadekovMethod(){
+        System.out.print("=================================");
+        System.out.print("Садеков");
         ComputerComponent component = new ComputerComponent();
         component.PrintMainInfo();
         component.PrintSpecsInfo();
@@ -49,5 +51,6 @@ public class Main {
         System.out.print(component1.CalculateFreeMemory(2047));
         System.out.print("\n");
         System.out.print(component1.GetRublePrice());
+        System.out.print("=================================");
     }
 }
