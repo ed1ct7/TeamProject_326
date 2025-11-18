@@ -4,14 +4,7 @@ public class Square {
     private double a;
 
     public Square(double a) {
-        if (a <= 0) {
-            throw new IllegalArgumentException("Сторона должна быть > 0");
-        }
         this.a = a;
-    }
-
-    public double getA() {
-        return a;
     }
 
     public double area() {
