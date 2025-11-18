@@ -3,6 +3,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.kazakova.Coffee;
 import allclasses.tigranyan.Notes;
 import allclasses.tigranyan.Scales;
 import allclasses.tigranyan.Tonality;
@@ -15,6 +16,7 @@ public class Main {
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
+        kazakova();
         buldakovMethod();
 
     }
@@ -53,6 +55,10 @@ public class Main {
         System.out.println(toy1.ToString());
 
     }
+
+    public static void kazakova(){
+        Coffee coffee = new Coffee("Раф", 1);
+        System.out.println("\nКазакова, "+ coffee.getCoffee());
     public static void buldakovMethod() {
         Vector vec1 = new Vector();
         Vector vec2 = new Vector(1.5,2);
