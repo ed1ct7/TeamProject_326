@@ -1,3 +1,7 @@
+import allclasses.petrenko.entities.Position;
+import allclasses.petrenko.entities.SchoolWorkerEntity;
+import allclasses.petrenko.repository.PositionRepository;
+import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
 import allclasses.tigranyan.Notes;
 import allclasses.tigranyan.Scales;
@@ -7,6 +11,8 @@ import allclasses.buldakov.*;
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
+        tigranyan();
+        petrenko();
         tigranyanMethods();
         bartasevichMethod();
         buldakovMethod();
@@ -22,6 +28,24 @@ public class Main {
         }
     }
 
+    public  static  void petrenko()
+    {
+        System.out.println("ПЕТРЕНКО");
+        SchoolWorkerEntity worker = new SchoolWorkerEntity();
+
+        try (SchoolWorkerRepository repository = new SchoolWorkerRepository(worker)) {
+           repository.ChangeWorkerFullName("Anton");
+           repository.ChangeWorkerPhone("89119163364");
+           repository.ChangeWorkerPosition(Position.Teacher);
+        }
+        try (PositionRepository repository = new PositionRepository()) {
+           repository.ChangeSalary(Position.Teacher, Position.Teacher.GetSalary()*1.1);
+           repository.ChangeRequirements(Position.Teacher, "really good teach");
+        }
+
+        System.out.println(worker);
+    }
+  
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
         Toy toy1 = new Toy();
