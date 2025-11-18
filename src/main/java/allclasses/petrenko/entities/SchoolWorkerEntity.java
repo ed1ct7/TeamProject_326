@@ -27,4 +27,5 @@ public class SchoolWorkerEntity
         Position = position;
     }
     private Position Position;
+
 }

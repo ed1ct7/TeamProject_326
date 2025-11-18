@@ -3,7 +3,7 @@ package allclasses.petrenko.repository;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
 
-public class SchoolWorkerRepository
+public class SchoolWorkerRepository implements AutoCloseable
 {
     SchoolWorkerEntity worker;
 
@@ -16,6 +16,8 @@ public class SchoolWorkerRepository
     public SchoolWorkerRepository(SchoolWorkerEntity worker) {
         this.worker = worker;
     }
+
+
     public boolean ChangeWorkerPosition(Position position) {
         try {
             worker.setPosition(position);
@@ -43,9 +45,16 @@ public class SchoolWorkerRepository
             return false;
         }
     }
+
     public SchoolWorkerEntity getWorker()
     {
         return worker;
+    }
+
+    @Override
+    public void close() {
+        // Освобождение ресурсов
+        System.out.println("SchoolWorkerRepos закрыт");
     }
 
 
