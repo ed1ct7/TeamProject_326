@@ -5,19 +5,19 @@ import allclasses.tigranyan.Notes;
 
 public class Tonality {
 
-    private String key;
+    private Notes key;
     private Scales scale;
 
-    public Tonality(String key, Scales scale) {
+    public Tonality(Notes key, Scales scale) {
         this.key = key;
         this.scale = scale;
     }
 
     public String getKey() {
-        return key;
+        return key.toString();
     }
 
-    public void setKey(String key) {
+    public void setKey(Notes key) {
         this.key = key;
     }
 
@@ -37,17 +37,8 @@ public class Tonality {
         return this.scale == Scales.MINOR;
     }
 
-    public Notes getTonicNote() {
-        try {
-            return Notes.valueOf(key);
-        } catch (IllegalArgumentException e) {
-            return null; // invalid note string
-        }
-    }
-
     public Notes[] getScaleNotes() {
-        Notes tonic = getTonicNote();
-        if (tonic == null) return null;
+        if (key == null) return null;
 
         int[] intervals;
 
@@ -59,18 +50,17 @@ public class Tonality {
 
         Notes[] scaleNotes = new Notes[7];
         for (int i = 0; i < intervals.length; i++) {
-            scaleNotes[i] = tonic.transpose(intervals[i]);
+            scaleNotes[i] = key.transpose(intervals[i]);
         }
 
         return scaleNotes;
     }
 
     public Tonality transposeTonality(int semitones) {
-        Notes tonic = getTonicNote();
-        if (tonic == null) return null;
+        if (key == null) return null;
 
-        Notes newTonic = tonic.transpose(semitones);
-        return new Tonality(newTonic.name(), this.scale);
+        Notes newTonic = key.transpose(semitones);
+        return new Tonality(newTonic, this.scale);
     }
 
     @Override
