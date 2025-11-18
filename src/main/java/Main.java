@@ -1,7 +1,6 @@
 import allclasses.bartasevich.Toy;
+import allclasses.sadikov.Apple;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -27,4 +26,12 @@ public class Main {
         System.out.println(toy1.ToString());
 
     }
+
+    public static void sadikovMethod(){
+        Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
+        Apple apple2 = new Apple();
+        System.out.println(apple.toString());
+        System.out.println(apple2.toString());
+    }
+
 }
