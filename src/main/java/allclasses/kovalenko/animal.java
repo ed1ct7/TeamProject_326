@@ -20,57 +20,40 @@ public class animal {
         this.weight = weight;
     }
 
-    // метод для вывода информации о животном
-    public void printInfo() {
-        System.out.println("Информация о животном:");
-        System.out.println("Имя: " + name);
-        System.out.println("Вид: " + species);
-        System.out.println("Возраст: " + age + " лет");
-        System.out.println("Вес: " + weight + " кг");
-        System.out.println("----------------------");
+    public String toString() {
+        return "Вид: " + species + ", имя: " + name + ", возраст: " + age + " лет" +
+                ", вес: " + weight + " кг";
     }
 
-    // Метод для вывода информации в одну строку
-    public void printShortInfo() {
-        System.out.println(name + " (" + species + "), " + age + " лет, " + weight + " кг");
+    // определение является ли животное молодым
+    public boolean isYoung() {
+        return age <= 3;
     }
 
-    // Метод который возвращает строку с информацией
-    public String getInfo() {
-        return "Имя: " + name + ", Вид: " + species + ", Возраст: " + age + " лет, Вес: " + weight + " кг";
+    // определение является ли животное легким
+    public boolean isLightWeight() {
+        return weight <= 5.0;
     }
 
-    // Метод для красивого форматированного вывода
-    public void displayInfo() {
-        System.out.println("╔══════════════════════════════╗");
-        System.out.println("║         ИНФОРМАЦИЯ           ║");
-        System.out.println("╠══════════════════════════════╣");
-        System.out.println("║ Имя:    " + padRight(name, 20) + " ║");
-        System.out.println("║ Вид:    " + padRight(species, 20) + " ║");
-        System.out.println("║ Возраст:" + padRight(age + " лет", 20) + " ║");
-        System.out.println("║ Вес:    " + padRight(weight + " кг", 20) + " ║");
-        System.out.println("╚══════════════════════════════╝");
+    // определение является ли животное взрослым
+    public boolean isAdult() {
+        return age >= 3;
     }
 
-    // Вспомогательный метод для форматирования
-    private String padRight(String text, int length) {
-        return String.format("%-" + length + "s", text);
+    // увеличение возраста на 1 год
+    public void increaseAge() {
+        age++;
     }
 
-    // Геттеры для доступа к полям
-    public String getName() {
-        return name;
+    // изменение веса животного
+    public void changeWeight(double newWeight) {
+        if (newWeight >= 0) {
+            weight = newWeight;
+        }
     }
 
-    public String getSpecies() {
-        return species;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public double getWeight() {
-        return weight;
+    // определение является ли животное тяжелым
+    public boolean isHeavy() {
+        return weight >= 50.0;
     }
 }
