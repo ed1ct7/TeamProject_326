@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.paegle.Chocolate;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        PaegleMethod();
 
     }
 
@@ -26,5 +28,12 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+    public static void PaegleMethod()
+    {
+        Chocolate chocolate1 = new Chocolate();
+        Chocolate chocolate2 = new Chocolate("GoldApple", "Горький", 75, 200);
+        System.out.println(chocolate1.ToPrint());
+        System.out.println(chocolate2.ToPrint());
     }
 }
