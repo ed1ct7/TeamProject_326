@@ -18,10 +18,11 @@ public class Toy {
         this.ageHigh = ageHigh;
         this.price = price;
     }
-
     public String ToString(){
         return name + " от " + ageLow + " до " + ageHigh + " цена " + price;
     }
-
+    public boolean isToyAgeAppropriate (int age){
+        return age >= ageLow && age <= ageHigh;
+    }
 
 }
