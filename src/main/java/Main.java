@@ -75,7 +75,7 @@ public class Main {
         System.out.println("Первый телефон полностью разряжен, заряд: " + phone1.getBattery());
         phone2.dischargeFully();
         System.out.println("Второй телефон полностью разряжен, заряд: " + phone2.getBattery());
-
+    }
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
