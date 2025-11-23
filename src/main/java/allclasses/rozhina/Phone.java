@@ -7,6 +7,32 @@ public class Phone {
     private int memory; // в ГБ
     private int battery; // 0–100 %
 
+    public String getBrand() {
+        return brand;
+    }
+    public String getModel() {
+        return model;
+    }
+    public float getPrice() {
+        return price;
+    }
+    public void setPrice(float price) {
+        if (price > 0) this.price = price;
+        else this.price = 0;
+    }
+    public int getMemory() {
+        return memory;
+    }
+    public void setMemory(int memory) {
+        this.memory = Math.max(memory, 0);
+    }
+    public int getBattery() {
+        return battery;
+    }
+    public void setBattery(int battery) {
+        if (battery < 0) this.battery = 0;
+        else this.battery = Math.min(battery, 100);
+    }
     public Phone() {
         brand = "Unknown";
         model = "Unknown";
@@ -18,9 +44,9 @@ public class Phone {
     public Phone(String brand, String model, float price, int memory, int battery) {
         this.brand = brand;
         this.model = model;
-        this.price = price;
-        this.memory = memory;
-        this.battery = battery;
+        setPrice(price);
+        setMemory(memory);
+        setBattery(battery);
     }
 
     public String ToString() {
