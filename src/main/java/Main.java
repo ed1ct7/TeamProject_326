@@ -10,7 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
-
+        gulyaevMethod();
     }
 
     public static void tigranyan(){
