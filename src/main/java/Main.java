@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.gulyaev.Rectangle;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -26,5 +27,14 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+    public static void gulyaevMethod(){
+        Rectangle rec1 = new Rectangle(1, 2);
+        Rectangle rec2 = new Rectangle();
+        Rectangle rec3 = new Rectangle(10, 5);
+        int square1 = rec1.Square();
+        int perimeter = rec1.Perimeter();
+        System.out.println("Площадь прямоугольника: " + square1);
+        System.out.println("Периметр треугольника: " + perimeter);
     }
 }
