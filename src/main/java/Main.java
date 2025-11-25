@@ -3,6 +3,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.sadikov.Apple;
 import allclasses.rozhina.Phone;
 import allclasses.kazakova.Coffee;
 import allclasses.tigranyan.Notes;
@@ -68,6 +69,14 @@ public class Main {
         System.out.println(toy1.ToString());
 
     }
+
+    public static void sadikovMethod(){
+        Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
+        Apple apple2 = new Apple();
+        System.out.println(apple.toString());
+        System.out.println(apple2.toString());
+    }
+
     public static void rozhinaMethod() {
         Phone phone1 = new Phone();
         Phone phone2 = new Phone("iPhone", "16 Pro Max", 104490, 256, 10);
