@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.romanova.Book;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        romanovaMethod();
 
     }
 
@@ -26,5 +28,11 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+    public static void romanovaMethod() {
+        Book book = new Book("Гарри Поттер и Философский камень", "Дж.К. Роулинг", 400, 1200, 1997);
+        Book book1 = new Book();
+        System.out.println(book.PrintBook());
+        System.out.println(book1.PrintBook());
     }
 }
