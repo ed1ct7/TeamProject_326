@@ -30,7 +30,6 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
-        tigranyan();
         kovalenkoMethod();
         petrenko();
         tigranyanMethods();
@@ -72,6 +71,7 @@ public class Main {
 
         System.out.println(worker);
     }
+  
     public static void kovalenkoMethod() {
         System.out.println("\nКОВАЛЕНКО");
         Animal animal1 = new Animal();
@@ -145,6 +145,7 @@ public class Main {
         phone2.dischargeFully();
         System.out.println("Второй телефон полностью разряжен, заряд: " + phone2.getBattery());
     }
+  
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
@@ -220,5 +221,15 @@ public class Main {
         Parallelogram parallelogram1 = new Parallelogram(2,7);
         System.out.println(parallelogram.toString());
         System.out.println(parallelogram1.toString());
+    }
+  
+    public static void gulyaevMethod(){
+        Rectangle rec1 = new Rectangle(1, 2);
+        Rectangle rec2 = new Rectangle();
+        Rectangle rec3 = new Rectangle(10, 5);
+        int square1 = rec1.Square();
+        int perimeter = rec1.Perimeter();
+        System.out.println("Площадь прямоугольника: " + square1);
+        System.out.println("Периметр треугольника: " + perimeter);
     }
 }
