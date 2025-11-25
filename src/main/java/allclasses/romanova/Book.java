@@ -1,13 +1,13 @@
 package allclasses.romanova;
 
 public class Book {
-    private String title;
-    private String author;
-    private int page;
-    private int price;
-    private int year;
+    public String title;
+    public String author;
+    public int page;
+    public int price;
+    public int year;
 
-    public Book(){
+    public Book() {
         title = "Название";
         author = "Автор";
         year = 2025;
@@ -15,30 +15,22 @@ public class Book {
         price = 0;
     }
 
-    public Book(String title, String author, int page, int price, int year){
+    public Book(String title, String author, int page, int price, int year) {
         this.title = title;
         this.author = author;
         this.page = page;
         this.price = price;
         this.year = year;
     }
-
-    public String PrintBook(){
+    public String PrintBook() {
         return title + " - " + author + " (" + year + "), " + page + " стр., цена: " + price;
-    }
-    public int getBookAge() {
-        return 2025 - year;
-    }
-
-    public boolean isOldBook() {
-        return getBookAge() > 50;
     }
 
     public boolean isThickBook() {
         return page > 500;
     }
 
-    public String getShortInfo() {
-        return title + " (" + year + ") - " + price + " руб.";
+    public String ShortInfo() {
+        return title + " (" + year + ") -" + price + "руб.";
     }
 }
