@@ -1,5 +1,5 @@
 import allclasses.bartasevich.Toy;
-
+import allclasses.kulikov.Parallelogram;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -9,6 +9,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        kulikovMethod();
 
     }
 
@@ -26,5 +27,12 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void kulikovMethod(){
+        Parallelogram parallelogram = new Parallelogram(4,5);
+        Parallelogram parallelogram1 = new Parallelogram(2,7);
+        System.out.println(parallelogram.toString());
+        System.out.println(parallelogram1.toString());
     }
 }
