@@ -31,8 +31,8 @@ public class Main {
         rozhinaMethod();
         kazakova();
         buldakovMethod();
-
         sadekovMethod();
+        ezerskiyMethod();
     }
 
     public static void tigranyanMethods(){
