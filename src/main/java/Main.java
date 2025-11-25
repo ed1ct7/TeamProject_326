@@ -9,7 +9,17 @@ import allclasses.tigranyan.Notes;
 import allclasses.tigranyan.Scales;
 import allclasses.tigranyan.Tonality;
 import allclasses.buldakov.*;
+import allclasses.sadekov.ComputerComponent;
+import allclasses.sadekov.E_ComponentSpecs;
+import allclasses.sadekov.E_ComponentTypes;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
@@ -20,6 +30,7 @@ public class Main {
         kazakova();
         buldakovMethod();
 
+        sadekovMethod();
     }
 
     public static void tigranyanMethods(){
@@ -88,5 +99,23 @@ public class Main {
         vec1.setY(3);
         System.out.println("\nВектор 1: "+vec1.ToString());
         System.out.println("Вектор 2: "+vec2.ToString());
+    }
+
+    public static void sadekovMethod(){
+        System.out.print("=================================");
+        System.out.print("Садеков");
+        ComputerComponent component = new ComputerComponent();
+        component.PrintMainInfo();
+        component.PrintSpecsInfo();
+        ComputerComponent component1 = new ComputerComponent("NVIDIA GT 710", "Легенда, в описании не нуждается",
+                "Palit", 100.0, E_ComponentTypes.GraphicsCard, Map.of(E_ComponentSpecs.MemoryVolume, 1024.0));
+        component1.PrintMainInfo();
+        component1.PrintSpecsInfo();
+        component1.AddEditSpecInfo(E_ComponentSpecs.MemoryVolume, 2048.0);
+        component1.PrintSpecsInfo();
+        System.out.print(component1.CalculateFreeMemory(2047));
+        System.out.print("\n");
+        System.out.print(component1.GetRublePrice());
+        System.out.print("=================================");
     }
 }
