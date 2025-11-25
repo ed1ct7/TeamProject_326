@@ -1,3 +1,5 @@
+import allclasses.ezerskiy.entity.SchoolEntity;
+import allclasses.ezerskiy.repository.SchoolRepository;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
@@ -68,4 +70,29 @@ public class Main {
         System.out.println("\nВектор 1: "+vec1.ToString());
         System.out.println("Вектор 2: "+vec2.ToString());
     }
+
+    public  static  void ezerskiyMethod(){
+        SchoolRepository SchoolRep = new SchoolRepository();
+        SchoolRep.getSchool().setName("Школа №445");
+        SchoolRep.getSchool().setAddress("ул. Строителей 16");
+        SchoolRep.AddContact("+7 999 999 99 99");
+        SchoolRep.AddContact("schol445@mail.ru");
+        SchoolRep.AddContact("+7 200 111 12 21");
+
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+
+        System.out.println(SchoolRep.GetSchoolFullNameAddress());
+        
+        System.out.println("Количество работников школы");
+        System.out.println(SchoolRep.getSchool().getWorkers().size());
+
+        System.out.println("Все контакты школы:");
+        for (String contact : SchoolRep.getSchool().getContacts())
+        {
+            System.out.println(contact);
+        }
+    }
+
 }
