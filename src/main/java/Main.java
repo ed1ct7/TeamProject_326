@@ -12,6 +12,7 @@ import allclasses.buldakov.*;
 import allclasses.sadekov.ComputerComponent;
 import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
+import allclasses.gulyaev.Rectangle;
 
 import java.util.Collection;
 import java.util.List;
@@ -33,6 +34,7 @@ public class Main {
         sadekovMethod();
     }
 
+        gulyaevMethod();
     public static void tigranyanMethods(){
         Tonality tonality = new Tonality(Notes.A, Scales.MINOR);
         Notes[] scale = tonality.getScaleNotes();
