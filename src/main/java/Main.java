@@ -11,7 +11,6 @@ public class Main {
         tigranyan();
         bartasevichMethod();
         PaegleMethod();
-
     }
 
     public static void tigranyan(){
