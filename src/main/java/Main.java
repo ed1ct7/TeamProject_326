@@ -21,6 +21,7 @@ import allclasses.sadekov.E_ComponentTypes;
 import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
 
+import allclasses.kulikov.Parallelogram;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +42,7 @@ public class Main {
         gulyaevMethod();
         sadekovMethod();
         ezerskiyMethod();
+        kulikovMethod();
     }
 
     public static void tigranyanMethods(){
@@ -69,6 +71,7 @@ public class Main {
 
         System.out.println(worker);
     }
+  
     public static void kovalenkoMethod() {
         System.out.println("\nКОВАЛЕНКО");
         Animal animal1 = new Animal();
@@ -142,6 +145,7 @@ public class Main {
         phone2.dischargeFully();
         System.out.println("Второй телефон полностью разряжен, заряд: " + phone2.getBattery());
     }
+  
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
@@ -211,6 +215,14 @@ public class Main {
         System.out.println(book.PrintBook());
         System.out.println(book1.PrintBook());
     }
+
+    public static void kulikovMethod(){
+        Parallelogram parallelogram = new Parallelogram(4,5);
+        Parallelogram parallelogram1 = new Parallelogram(2,7);
+        System.out.println(parallelogram.toString());
+        System.out.println(parallelogram1.toString());
+    }
+  
     public static void gulyaevMethod(){
         Rectangle rec1 = new Rectangle(1, 2);
         Rectangle rec2 = new Rectangle();
