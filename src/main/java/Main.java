@@ -34,8 +34,8 @@ public class Main {
         PaegleMethod();
         gulyaevMethod();
         sadekovMethod();
-    }
         kulikovMethod();
+    }
 
     public static void tigranyanMethods(){
         Tonality tonality = new Tonality(Notes.A, Scales.MINOR);
