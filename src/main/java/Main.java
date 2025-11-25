@@ -5,6 +5,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.romanova.Book;
 import allclasses.poruchikov.Ships;
 import allclasses.kovalenko.Animal;
 import allclasses.sadikov.Apple;
@@ -204,5 +205,11 @@ public class Main {
         Chocolate chocolate2 = new Chocolate("GoldApple", "Горький", 75, 200);
         System.out.println(chocolate1.ToPrint());
         System.out.println(chocolate2.ToPrint());
+    }
+    public static void romanovaMethod() {
+        Book book = new Book("Гарри Поттер и Философский камень", "Дж.К. Роулинг", 400, 1200, 1997);
+        Book book1 = new Book();
+        System.out.println(book.PrintBook());
+        System.out.println(book1.PrintBook());
     }
 }
