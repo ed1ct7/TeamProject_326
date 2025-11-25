@@ -135,4 +135,13 @@ public class Main {
         System.out.println(chocolate1.ToPrint());
         System.out.println(chocolate2.ToPrint());
     }
+    public static void gulyaevMethod(){
+        Rectangle rec1 = new Rectangle(1, 2);
+        Rectangle rec2 = new Rectangle();
+        Rectangle rec3 = new Rectangle(10, 5);
+        int square1 = rec1.Square();
+        int perimeter = rec1.Perimeter();
+        System.out.println("Площадь прямоугольника: " + square1);
+        System.out.println("Периметр треугольника: " + perimeter);
+    }
 }
