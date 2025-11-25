@@ -13,14 +13,13 @@ import allclasses.sadekov.ComputerComponent;
 import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
 import allclasses.paegle.Chocolate;
+import allclasses.gulyaev.Rectangle;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
@@ -30,11 +29,11 @@ public class Main {
         rozhinaMethod();
         kazakova();
         buldakovMethod();
-
+        PaegleMethod();
+        gulyaevMethod();
         sadekovMethod();
     }
 
-        PaegleMethod();
     public static void tigranyanMethods(){
         Tonality tonality = new Tonality(Notes.A, Scales.MINOR);
         Notes[] scale = tonality.getScaleNotes();
