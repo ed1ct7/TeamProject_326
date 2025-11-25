@@ -5,6 +5,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.sadikov.Apple;
 import allclasses.rozhina.Phone;
 import allclasses.kazakova.Coffee;
 import allclasses.tigranyan.Notes;
@@ -14,14 +15,14 @@ import allclasses.buldakov.*;
 import allclasses.sadekov.ComputerComponent;
 import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
+import allclasses.paegle.Chocolate;
+import allclasses.gulyaev.Rectangle;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
@@ -31,6 +32,8 @@ public class Main {
         rozhinaMethod();
         kazakova();
         buldakovMethod();
+        PaegleMethod();
+        gulyaevMethod();
         sadekovMethod();
         ezerskiyMethod();
     }
@@ -69,6 +72,14 @@ public class Main {
         System.out.println(toy1.ToString());
 
     }
+
+    public static void sadikovMethod(){
+        Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
+        Apple apple2 = new Apple();
+        System.out.println(apple.toString());
+        System.out.println(apple2.toString());
+    }
+
     public static void rozhinaMethod() {
         Phone phone1 = new Phone();
         Phone phone2 = new Phone("iPhone", "16 Pro Max", 104490, 256, 10);
@@ -145,4 +156,11 @@ public class Main {
         }
     }
 
+    public static void PaegleMethod()
+    {
+        Chocolate chocolate1 = new Chocolate();
+        Chocolate chocolate2 = new Chocolate("GoldApple", "Горький", 75, 200);
+        System.out.println(chocolate1.ToPrint());
+        System.out.println(chocolate2.ToPrint());
+    }
 }
