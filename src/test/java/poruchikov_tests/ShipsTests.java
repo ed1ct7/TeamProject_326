@@ -31,13 +31,13 @@ public class ShipsTests {
     @Test
     public void oldShipTrueTest() {
         Ships ship = new Ships("Старый корабль", "Танкер", 1990, 40000.0);
-        Assert.assertTrue(ship.OldShip()); // 2025-1990=35 > 20 = true
+        Assert.assertTrue(ship.OldShip()); 
     }
 
     @Test
     public void oldShipFalseTest() {
         Ships ship = new Ships("Новый корабль", "Контейнеровоз", 2020, 60000.0);
-        Assert.assertFalse(ship.OldShip()); // 2025-2020=5 > 20 = false
+        Assert.assertFalse(ship.OldShip());
     }
 
     @Test
