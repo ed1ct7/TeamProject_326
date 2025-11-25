@@ -5,6 +5,9 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.romanova.Book;
+import allclasses.poruchikov.Ships;
+import allclasses.kovalenko.Animal;
 import allclasses.sadikov.Apple;
 import allclasses.rozhina.Phone;
 import allclasses.kazakova.Coffee;
@@ -26,9 +29,11 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
+        kovalenkoMethod();
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
+        poruchikovMethod();
         rozhinaMethod();
         kazakova();
         buldakovMethod();
@@ -64,6 +69,33 @@ public class Main {
 
         System.out.println(worker);
     }
+    public static void kovalenkoMethod() {
+        System.out.println("\nКОВАЛЕНКО");
+        Animal animal1 = new Animal();
+        Animal animal2 = new Animal("Барсик", "Кот", 2, 4.5);
+
+        System.out.println("Животное 1: " + animal1.toString());
+        System.out.println("Животное 2: " + animal2.toString());
+
+        System.out.println("Животное 1 молодое: " + animal1.isYoung());
+        System.out.println("Животное 2 молодое: " + animal2.isYoung());
+
+        System.out.println("Животное 1 легкое: " + animal1.isLightWeight());
+        System.out.println("Животное 2 легкое: " + animal2.isLightWeight());
+
+        System.out.println("Животное 1 взрослое: " + animal1.isAdult());
+        System.out.println("Животное 2 взрослое: " + animal2.isAdult());
+
+        animal2.increaseAge();
+        System.out.println("Возраст животного 2 увеличен: " + animal2.toString());
+
+        animal2.changeWeight(5.2);
+        System.out.println("Вес животного 2 изменен: " + animal2.toString());
+
+        System.out.println("Животное 1 тяжелое: " + animal1.isHeavy());
+        System.out.println("Животное 2 тяжелое: " + animal2.isHeavy());
+    }
+
   
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
@@ -71,6 +103,16 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void poruchikovMethod() {
+        System.out.println("\n~~~~~\nПоручиков");
+        Ships ship = new Ships("Титаник", "Пассажирский", 1912, 52310.0);
+
+        ship.printShipInfo();
+        System.out.println("Возраст корабля: " + ship.calculateAge() + " лет");
+        System.out.println("Старый корабль (>20 лет): " + ship.OldShip());
+        System.out.println("Эффективность топлива: " + ship.calculateFuelEfficiency() + " км/т\n~~~~~\n");
     }
 
     public static void sadikovMethod(){
@@ -162,5 +204,20 @@ public class Main {
         Chocolate chocolate2 = new Chocolate("GoldApple", "Горький", 75, 200);
         System.out.println(chocolate1.ToPrint());
         System.out.println(chocolate2.ToPrint());
+    }
+    public static void romanovaMethod() {
+        Book book = new Book("Гарри Поттер и Философский камень", "Дж.К. Роулинг", 400, 1200, 1997);
+        Book book1 = new Book();
+        System.out.println(book.PrintBook());
+        System.out.println(book1.PrintBook());
+    }
+    public static void gulyaevMethod(){
+        Rectangle rec1 = new Rectangle(1, 2);
+        Rectangle rec2 = new Rectangle();
+        Rectangle rec3 = new Rectangle(10, 5);
+        int square1 = rec1.Square();
+        int perimeter = rec1.Perimeter();
+        System.out.println("Площадь прямоугольника: " + square1);
+        System.out.println("Периметр треугольника: " + perimeter);
     }
 }

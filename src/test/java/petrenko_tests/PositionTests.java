@@ -16,7 +16,6 @@ public class PositionTests {
     public void setUp() {
         position = Position.Empty;
         repository = new PositionRepository();
-
     }
 
     @Test
