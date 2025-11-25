@@ -1,19 +1,19 @@
 package allclasses.kovalenko;
 
-public class animal {
+public class Animal {
     private String name;
     private String species;
     private int age;
     private double weight;
 
-    public animal() {
+    public Animal() {
         name = "Неизвестно";
         species = "Неизвестно";
         age = 0;
         weight = 0.0;
     }
 
-    public animal(String name, String species, int age, double weight) {
+    public Animal(String name, String species, int age, double weight) {
         this.name = name;
         this.species = species;
         this.age = age;
