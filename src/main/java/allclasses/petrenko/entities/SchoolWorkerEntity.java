@@ -28,4 +28,17 @@ public class SchoolWorkerEntity
     }
     private Position Position;
 
+    public boolean equals(SchoolWorkerEntity other){
+        boolean result;
+        if((other == null) || (getClass() != other.getClass())){
+            result = false;
+        }
+        else{
+            SchoolWorkerEntity otherPeople = (SchoolWorkerEntity)other;
+            result = FullName.equals(other.FullName) &&  Phone.equals(other.Phone) && Position.equals(other.Position);
+        }
+
+        return result;
+    } // end equals
+
 }

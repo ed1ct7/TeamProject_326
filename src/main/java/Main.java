@@ -1,9 +1,13 @@
+import allclasses.ezerskiy.entity.SchoolEntity;
+import allclasses.ezerskiy.repository.SchoolRepository;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
 import allclasses.romanova.Book;
+import allclasses.poruchikov.Ships;
+import allclasses.kovalenko.Animal;
 import allclasses.sadikov.Apple;
 import allclasses.rozhina.Phone;
 import allclasses.kazakova.Coffee;
@@ -25,15 +29,19 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!");
+        tigranyan();
+        kovalenkoMethod();
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
+        poruchikovMethod();
         rozhinaMethod();
         kazakova();
         buldakovMethod();
         PaegleMethod();
         gulyaevMethod();
         sadekovMethod();
+        ezerskiyMethod();
     }
 
     public static void tigranyanMethods(){
@@ -62,6 +70,33 @@ public class Main {
 
         System.out.println(worker);
     }
+    public static void kovalenkoMethod() {
+        System.out.println("\nКОВАЛЕНКО");
+        Animal animal1 = new Animal();
+        Animal animal2 = new Animal("Барсик", "Кот", 2, 4.5);
+
+        System.out.println("Животное 1: " + animal1.toString());
+        System.out.println("Животное 2: " + animal2.toString());
+
+        System.out.println("Животное 1 молодое: " + animal1.isYoung());
+        System.out.println("Животное 2 молодое: " + animal2.isYoung());
+
+        System.out.println("Животное 1 легкое: " + animal1.isLightWeight());
+        System.out.println("Животное 2 легкое: " + animal2.isLightWeight());
+
+        System.out.println("Животное 1 взрослое: " + animal1.isAdult());
+        System.out.println("Животное 2 взрослое: " + animal2.isAdult());
+
+        animal2.increaseAge();
+        System.out.println("Возраст животного 2 увеличен: " + animal2.toString());
+
+        animal2.changeWeight(5.2);
+        System.out.println("Вес животного 2 изменен: " + animal2.toString());
+
+        System.out.println("Животное 1 тяжелое: " + animal1.isHeavy());
+        System.out.println("Животное 2 тяжелое: " + animal2.isHeavy());
+    }
+
   
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
@@ -69,6 +104,16 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void poruchikovMethod() {
+        System.out.println("\n~~~~~\nПоручиков");
+        Ships ship = new Ships("Титаник", "Пассажирский", 1912, 52310.0);
+
+        ship.printShipInfo();
+        System.out.println("Возраст корабля: " + ship.calculateAge() + " лет");
+        System.out.println("Старый корабль (>20 лет): " + ship.OldShip());
+        System.out.println("Эффективность топлива: " + ship.calculateFuelEfficiency() + " км/т\n~~~~~\n");
     }
 
     public static void sadikovMethod(){
@@ -129,6 +174,31 @@ public class Main {
         System.out.print(component1.GetRublePrice());
         System.out.print("=================================");
     }
+
+    public  static  void ezerskiyMethod(){
+        SchoolRepository SchoolRep = new SchoolRepository();
+        SchoolRep.getSchool().setName("Школа №445");
+        SchoolRep.getSchool().setAddress("ул. Строителей 16");
+        SchoolRep.AddContact("+7 999 999 99 99");
+        SchoolRep.AddContact("schol445@mail.ru");
+        SchoolRep.AddContact("+7 200 111 12 21");
+
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+        SchoolRep.AddWorker(new SchoolWorkerEntity());
+
+        System.out.println(SchoolRep.GetSchoolFullNameAddress());
+        
+        System.out.println("Количество работников школы");
+        System.out.println(SchoolRep.getSchool().getWorkers().size());
+
+        System.out.println("Все контакты школы:");
+        for (String contact : SchoolRep.getSchool().getContacts())
+        {
+            System.out.println(contact);
+        }
+    }
+
     public static void PaegleMethod()
     {
         Chocolate chocolate1 = new Chocolate();
