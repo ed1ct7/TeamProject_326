@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.poruchikov.Ships;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,7 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        poruchikovMethod();
 
     }
 
@@ -27,4 +29,15 @@ public class Main {
         System.out.println(toy1.ToString());
 
     }
+
+    public static void poruchikovMethod() {
+        System.out.println("\n~~~~~\nПоручиков");
+        Ships ship = new Ships("Титаник", "Пассажирский", 1912, 52310.0);
+
+        ship.printShipInfo();
+        System.out.println("Возраст корабля: " + ship.calculateAge() + " лет");
+        System.out.println("Старый корабль (>20 лет): " + ship.OldShip());
+        System.out.println("Эффективность топлива: " + ship.calculateFuelEfficiency() + " км/т\n~~~~~\n");
+    }
+
 }
