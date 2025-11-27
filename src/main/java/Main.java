@@ -1,4 +1,3 @@
-import allclasses.ezerskiy.entity.SchoolEntity;
 import allclasses.ezerskiy.repository.SchoolRepository;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
@@ -22,10 +21,8 @@ import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
 
 import allclasses.kulikov.Parallelogram;
-import java.util.Collection;
-import java.util.List;
+
 import java.util.Map;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +40,7 @@ public class Main {
         sadekovMethod();
         ezerskiyMethod();
         kulikovMethod();
+        romanovaMethod();
     }
 
     public static void tigranyanMethods(){
@@ -99,7 +97,7 @@ public class Main {
         System.out.println("Животное 2 тяжелое: " + animal2.isHeavy());
     }
 
-  
+
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
         Toy toy1 = new Toy();
@@ -145,7 +143,7 @@ public class Main {
         phone2.dischargeFully();
         System.out.println("Второй телефон полностью разряжен, заряд: " + phone2.getBattery());
     }
-  
+
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
@@ -191,7 +189,7 @@ public class Main {
         SchoolRep.AddWorker(new SchoolWorkerEntity());
 
         System.out.println(SchoolRep.GetSchoolFullNameAddress());
-        
+
         System.out.println("Количество работников школы");
         System.out.println(SchoolRep.getSchool().getWorkers().size());
 
@@ -210,6 +208,7 @@ public class Main {
         System.out.println(chocolate2.ToPrint());
     }
     public static void romanovaMethod() {
+        System.out.println("romanova");
         Book book = new Book("Гарри Поттер и Философский камень", "Дж.К. Роулинг", 400, 1200, 1997);
         Book book1 = new Book();
         System.out.println(book.PrintBook());
@@ -222,7 +221,7 @@ public class Main {
         System.out.println(parallelogram.toString());
         System.out.println(parallelogram1.toString());
     }
-  
+
     public static void gulyaevMethod(){
         Rectangle rec1 = new Rectangle(1, 2);
         Rectangle rec2 = new Rectangle();
