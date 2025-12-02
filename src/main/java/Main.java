@@ -31,8 +31,9 @@ public class Main {
         kazakova();
         buldakovMethod();
         PaegleMethod();
-        gulyaevMethod();
+        //gulyaevMethod();
         sadekovMethod();
+        sadikovMethod();
     }
 
     public static void tigranyanMethods(){
@@ -73,8 +74,10 @@ public class Main {
     public static void sadikovMethod(){
         Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
         Apple apple2 = new Apple();
+        System.out.print("\n+++++++++++++++++++++++++++++++++++++\n");
         System.out.println(apple.toString());
         System.out.println(apple2.toString());
+        System.out.print("+++++++++++++++++++++++++++++++++++++");
     }
 
     public static void rozhinaMethod() {
