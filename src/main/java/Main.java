@@ -198,6 +198,8 @@ public class Main {
         {
             System.out.println(contact);
         }
+
+        System.out.println();
     }
 
     public static void PaegleMethod()
