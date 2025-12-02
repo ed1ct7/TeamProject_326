@@ -172,8 +172,8 @@ public class Main {
         component1.PrintSpecsInfo();
         System.out.print(component1.CalculateFreeMemory(2047));
         System.out.print("\n");
-        System.out.print(component1.GetRublePrice());
-        System.out.print("=================================");
+        System.out.println(component1.GetRublePrice());
+        System.out.println("=================================");
     }
 
     public  static  void ezerskiyMethod(){
@@ -198,6 +198,8 @@ public class Main {
         {
             System.out.println(contact);
         }
+
+        System.out.println();
     }
 
     public static void PaegleMethod()
