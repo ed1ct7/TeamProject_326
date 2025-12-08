@@ -4,6 +4,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.ponomaryova.Dogs;
 import allclasses.romanova.Book;
 import allclasses.poruchikov.Ships;
 import allclasses.kovalenko.Animal;
@@ -31,6 +32,7 @@ public class Main {
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
+        ponomaryova();
         poruchikovMethod();
         rozhinaMethod();
         kazakova();
@@ -107,6 +109,12 @@ public class Main {
 
     }
 
+    public static void ponomaryova() {
+        Dogs dog = new Dogs("Джек рассел терьер", 2018, "Фунтик");
+        System.out.println("\nПономарёва, " + dog.showDog());
+        System.out.println(dog.howAge());
+    }
+  
     public static void poruchikovMethod() {
         System.out.println("\n~~~~~\nПоручиков");
         Ships ship = new Ships("Титаник", "Пассажирский", 1912, 52310.0);
