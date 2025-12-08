@@ -32,7 +32,6 @@ public class Main {
         kazakova();
         buldakovMethod();
         PaegleMethod();
-        gulyaevMethod();
         sadekovMethod();
         mironenkoMethod();
     }

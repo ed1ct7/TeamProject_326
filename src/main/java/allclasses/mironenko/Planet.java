@@ -25,7 +25,6 @@ public class Planet {
     // Геттеры
     public String getName() { return name; }
     public double getRadius() { return radius; }
-    public double getMass() { return mass; }
     public boolean hasAtmosphere() { return hasAtmosphere; }
 
     // Сеттеры
