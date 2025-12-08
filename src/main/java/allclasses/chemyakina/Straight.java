@@ -1,4 +1,5 @@
 package allclasses.chemyakina;
+import java.util.Locale;
 
 public class Straight {
     private double a, b;
@@ -12,7 +13,7 @@ public class Straight {
     public double getB() { return b; }
 
     public String getEquation() {
-        return String.format("y = %.1fx + %.1f", a, b);
+        return String.format(Locale.US, "y = %.1fx + %.1f", a, b);
     }
 
     public double getIntersectionOX() {
@@ -30,6 +31,6 @@ public class Straight {
     public String getIntersectionPoint(Straight other) {
         if (this.a == other.a) return "Прямые параллельны";
         double x = (other.b - this.b) / (this.a - other.a);
-        return String.format("(%.1f; %.1f)", x, this.a * x + this.b);
+        return String.format(Locale.US,"(%.1f; %.1f)", x, this.a * x + this.b);
     }
 }
