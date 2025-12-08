@@ -1,4 +1,5 @@
 import allclasses.bartasevich.Toy;
+import allclasses.ponomaryova.Dogs;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +10,8 @@ public class Main {
         System.out.printf("Hello and welcome!");
         tigranyan();
         bartasevichMethod();
+        ponomaryova();
+
 
     }
 
@@ -26,5 +29,11 @@ public class Main {
         System.out.println(toy.ToString());
         System.out.println(toy1.ToString());
 
+    }
+
+    public static void ponomaryova() {
+        Dogs dog = new Dogs("Джек рассел терьер", 2018, "Фунтик");
+        System.out.println("\nПономарёва, " + dog.showDog());
+        System.out.println(dog.howAge());
     }
 }
