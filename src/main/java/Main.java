@@ -34,7 +34,7 @@ public class Main {
 
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
-        System.out.println("\nКазакова, "+ coffee.getCoffee());
+        System.out.println("\nКазакова, "+ coffee.getCoffee());}
     public static void buldakovMethod() {
         Vector vec1 = new Vector();
         Vector vec2 = new Vector(1.5,2);
