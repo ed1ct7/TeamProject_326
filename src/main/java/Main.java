@@ -30,11 +30,9 @@ public class Main {
         rozhinaMethod();
         kazakova();
         buldakovMethod();
-
+        PaegleMethod();
         sadekovMethod();
     }
-
-        PaegleMethod();
     public static void tigranyanMethods(){
         Tonality tonality = new Tonality(Notes.A, Scales.MINOR);
         Notes[] scale = tonality.getScaleNotes();
