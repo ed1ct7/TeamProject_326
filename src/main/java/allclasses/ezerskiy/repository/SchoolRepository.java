@@ -3,6 +3,7 @@ package allclasses.ezerskiy.repository;
 import allclasses.ezerskiy.entity.SchoolEntity;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SchoolRepository
@@ -27,9 +28,9 @@ public class SchoolRepository
     {
       School.setName("BASE_NAME");
       School.setAddress("BASE_ADDRESS");
-      School.setContacts(null);
-      School.setWorkers(null);
-      School.setStudents(null);
+      School.setContacts(new ArrayList<>());
+      School.setWorkers(new ArrayList<>());
+      School.setStudents(new ArrayList<>());
       School.setArea(0.0);
       School.setNumberOfClassrooms(0);
     }

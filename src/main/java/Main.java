@@ -1,4 +1,3 @@
-import allclasses.ezerskiy.entity.SchoolEntity;
 import allclasses.ezerskiy.repository.SchoolRepository;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
@@ -22,10 +21,8 @@ import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
 
 import allclasses.kulikov.Parallelogram;
-import java.util.Collection;
-import java.util.List;
+
 import java.util.Map;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,8 +38,10 @@ public class Main {
         PaegleMethod();
         gulyaevMethod();
         sadekovMethod();
+        sadikovMethod();
         ezerskiyMethod();
         kulikovMethod();
+        romanovaMethod();
     }
 
     public static void tigranyanMethods(){
@@ -99,7 +98,7 @@ public class Main {
         System.out.println("Животное 2 тяжелое: " + animal2.isHeavy());
     }
 
-  
+
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
         Toy toy1 = new Toy();
@@ -121,8 +120,10 @@ public class Main {
     public static void sadikovMethod(){
         Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
         Apple apple2 = new Apple();
+        System.out.print("\n+++++++++++++++++++++++++++++++++++++\n");
         System.out.println(apple.toString());
         System.out.println(apple2.toString());
+        System.out.print("+++++++++++++++++++++++++++++++++++++");
     }
 
     public static void rozhinaMethod() {
@@ -145,7 +146,7 @@ public class Main {
         phone2.dischargeFully();
         System.out.println("Второй телефон полностью разряжен, заряд: " + phone2.getBattery());
     }
-  
+
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
@@ -174,8 +175,8 @@ public class Main {
         component1.PrintSpecsInfo();
         System.out.print(component1.CalculateFreeMemory(2047));
         System.out.print("\n");
-        System.out.print(component1.GetRublePrice());
-        System.out.print("=================================");
+        System.out.println(component1.GetRublePrice());
+        System.out.println("=================================");
     }
 
     public  static  void ezerskiyMethod(){
@@ -191,7 +192,7 @@ public class Main {
         SchoolRep.AddWorker(new SchoolWorkerEntity());
 
         System.out.println(SchoolRep.GetSchoolFullNameAddress());
-        
+
         System.out.println("Количество работников школы");
         System.out.println(SchoolRep.getSchool().getWorkers().size());
 
@@ -200,6 +201,8 @@ public class Main {
         {
             System.out.println(contact);
         }
+
+        System.out.println();
     }
 
     public static void PaegleMethod()
@@ -210,6 +213,7 @@ public class Main {
         System.out.println(chocolate2.ToPrint());
     }
     public static void romanovaMethod() {
+        System.out.println("romanova");
         Book book = new Book("Гарри Поттер и Философский камень", "Дж.К. Роулинг", 400, 1200, 1997);
         Book book1 = new Book();
         System.out.println(book.PrintBook());
@@ -222,7 +226,7 @@ public class Main {
         System.out.println(parallelogram.toString());
         System.out.println(parallelogram1.toString());
     }
-  
+
     public static void gulyaevMethod(){
         Rectangle rec1 = new Rectangle(1, 2);
         Rectangle rec2 = new Rectangle();
