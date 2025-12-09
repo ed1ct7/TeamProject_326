@@ -53,6 +53,7 @@ public class Main {
         for (Notes note : scale) {
             System.out.println(note.toString());
         }
+        // Comment
     }
 
     public  static  void petrenko()
