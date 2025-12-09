@@ -3,7 +3,7 @@ import allclasses.chemyakina.Straight;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class StraightTest {
+public class StraightTests {
     @Test
     public void testGetEquation() {
         Straight straight = new Straight(2.0, 3.0);
