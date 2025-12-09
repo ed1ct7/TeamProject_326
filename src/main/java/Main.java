@@ -22,6 +22,7 @@ import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
 import allclasses.skrypnikova.Square;
 import allclasses.kulikov.Parallelogram;
+import allclasses.chemyakina.Straight;
 
 import java.util.Map;
 
@@ -45,6 +46,7 @@ public class Main {
         kulikovMethod();
         romanovaMethod();
         skrypnikovaMethod();
+        chemyakinaMethod();
     }
 
     public static void tigranyanMethods(){
@@ -256,5 +258,14 @@ public class Main {
         System.out.println("Площадь: " + square.area());
         System.out.println("Периметр: " + square.perimeter());
         System.out.println("Диагональ: " + String.format("%.4f", square.diagonal()));
+    }
+
+    public static void chemyakinaMethod() {
+        Straight line1 = new Straight(2, 3);
+        Straight line2 = new Straight(-1, 5);
+
+        System.out.println("Уравнение прямой 1: " + line1.getEquation());
+        System.out.println("Уравнение прямой 2: " + line2.getEquation());
+        System.out.println("Точка пересечения: " + line1.getIntersectionPoint(line2));
     }
 }
