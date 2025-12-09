@@ -28,8 +28,6 @@ public class Planet {
     public boolean hasAtmosphere() { return hasAtmosphere; }
 
     // Сеттеры
-    public void setName(String name) { this.name = name; }
-    public void setRadius(double radius) { this.radius = radius; }
     public void setMass(double mass) { this.mass = mass; }
     public void setHasAtmosphere(boolean hasAtmosphere) { this.hasAtmosphere = hasAtmosphere; }
 

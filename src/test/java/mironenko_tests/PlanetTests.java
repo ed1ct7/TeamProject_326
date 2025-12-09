@@ -41,7 +41,7 @@ public class PlanetTests {
     @Test
     public void testToString() {
         Planet earth = new Planet("Земля", 6371, 5.97e24, true);
-        String expected = "Планета: Земля, радиус: 6371 км, масса: 5.97e+24 кг, атмосфера: есть";
+        String expected = "Планета: Земля, радиус: 6371 км, масса: 5,97e+24 кг, атмосфера: есть";
         assertEquals(expected, earth.toString());
     }
 }
