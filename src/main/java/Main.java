@@ -188,6 +188,8 @@ public class Main {
     }
 
     public  static  void ezerskiyMethod(){
+        System.out.println();
+
         SchoolRepository SchoolRep = new SchoolRepository();
         SchoolRep.getSchool().setName("Школа №445");
         SchoolRep.getSchool().setAddress("ул. Строителей 16");
