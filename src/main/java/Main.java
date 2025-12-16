@@ -1,5 +1,3 @@
-import allclasses.buldakov.*;
-import allclasses.mironenko.Planet;
 import allclasses.petrenko.entities.Position;
 import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
@@ -11,12 +9,17 @@ import allclasses.kazakova.Coffee;
 import allclasses.tigranyan.Notes;
 import allclasses.tigranyan.Scales;
 import allclasses.tigranyan.Tonality;
+import allclasses.buldakov.*;
 import allclasses.sadekov.ComputerComponent;
 import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
 import allclasses.paegle.Chocolate;
-import java.util.Map;
+import allclasses.gulyaev.Rectangle;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,9 +31,10 @@ public class Main {
         kazakova();
         buldakovMethod();
         PaegleMethod();
+        gulyaevMethod();
         sadekovMethod();
-        mironenkoMethod();
     }
+
     public static void tigranyanMethods(){
         Tonality tonality = new Tonality(Notes.A, Scales.MINOR);
         Notes[] scale = tonality.getScaleNotes();
@@ -46,18 +50,18 @@ public class Main {
         SchoolWorkerEntity worker = new SchoolWorkerEntity();
 
         try (SchoolWorkerRepository repository = new SchoolWorkerRepository(worker)) {
-            repository.ChangeWorkerFullName("Anton");
-            repository.ChangeWorkerPhone("89119163364");
-            repository.ChangeWorkerPosition(Position.Teacher);
+           repository.ChangeWorkerFullName("Anton");
+           repository.ChangeWorkerPhone("89119163364");
+           repository.ChangeWorkerPosition(Position.Teacher);
         }
         try (PositionRepository repository = new PositionRepository()) {
-            repository.ChangeSalary(Position.Teacher, Position.Teacher.GetSalary()*1.1);
-            repository.ChangeRequirements(Position.Teacher, "really good teach");
+           repository.ChangeSalary(Position.Teacher, Position.Teacher.GetSalary()*1.1);
+           repository.ChangeRequirements(Position.Teacher, "really good teach");
         }
 
         System.out.println(worker);
     }
-
+  
     public static void bartasevichMethod(){
         Toy toy = new Toy("Кукла Маша",2,6,100);
         Toy toy1 = new Toy();
@@ -130,23 +134,5 @@ public class Main {
         Chocolate chocolate2 = new Chocolate("GoldApple", "Горький", 75, 200);
         System.out.println(chocolate1.ToPrint());
         System.out.println(chocolate2.ToPrint());
-    }
-
-    public static void mironenkoMethod() {
-        System.out.println("\n=== Метод Mironenko (Планеты) ===");
-
-        Planet earth = new Planet("Земля", 6371, 5.97e24, true);
-        Planet mars = new Planet("Марс", 3389.5, 6.39e23, false);
-        Planet jupiter = new Planet("Юпитер", 69911, 1.898e27, true);
-
-        System.out.println(earth);
-        System.out.println(mars);
-        System.out.println(jupiter);
-
-        System.out.printf("Площадь поверхности Земли: %.2e км²%n", earth.calculateSurfaceArea());
-        System.out.printf("Плотность Марса: %.2f кг/м³%n", mars.calculateDensity());
-        System.out.println("Земля - газовый гигант? " + earth.isGasGiant());
-        System.out.println("Юпитер - газовый гигант? " + jupiter.isGasGiant());
-        System.out.println("У Марса есть атмосфера? " + mars.hasAtmosphere());
     }
 }

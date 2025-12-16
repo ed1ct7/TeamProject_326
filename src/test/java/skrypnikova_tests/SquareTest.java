@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class Square_test
+public class SquareTest
 {
     @Test
     public  void square_area_test()
@@ -14,7 +14,7 @@ public class Square_test
     }
 
     @Test
-    public  void square_perimetr_test()
+    public  void square_perimeter_test()
     {
         Square square = new Square(7);
         assertEquals(28, square.perimeter(), 0.0001);
