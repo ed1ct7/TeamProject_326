@@ -1,12 +1,20 @@
 package romanova_test;
 
 import allclasses.romanova.Book;
+import io.qameta.allure.Issue;
+import io.qameta.allure.TmsLink;
 import org.junit.Test;
+import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Description;
 import static org.junit.Assert.*;
 
 public class BookTests {
 
     @Test
+    @DisplayName("Проверка, обычного конструктора")
+    @Description("Объект книга имеет название и автора")
+    @TmsLink("TestCase-2")
+    @Issue("Bug0025")
     public void testDefaultConstructor() {
         Book book = new Book();
         assertEquals("Название", book.title);
