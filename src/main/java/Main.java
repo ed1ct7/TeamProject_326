@@ -20,6 +20,9 @@ import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
 import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
+import allclasses.skrypnikova.Square;
+import allclasses.kulikov.Parallelogram;
+import allclasses.chemyakina.Straight;
 
 import allclasses.kulikov.Parallelogram;
 import allclasses.streltsova.CityManager;
@@ -45,6 +48,8 @@ public class Main {
         ezerskiyMethod();
         kulikovMethod();
         romanovaMethod();
+        skrypnikovaMethod();
+        chemyakinaMethod();
         streltsovaMethod();
     }
 
@@ -250,6 +255,24 @@ public class Main {
         System.out.println("Площадь прямоугольника: " + square1);
         System.out.println("Периметр треугольника: " + perimeter);
     }
+
+    public static void skrypnikovaMethod() {
+        Square square = new Square(7);
+        System.out.println("Квадрат со стороной: " + 7);
+        System.out.println("Площадь: " + square.area());
+        System.out.println("Периметр: " + square.perimeter());
+        System.out.println("Диагональ: " + String.format("%.4f", square.diagonal()));
+    }
+
+    public static void chemyakinaMethod() {
+        Straight line1 = new Straight(2, 3);
+        Straight line2 = new Straight(-1, 5);
+
+        System.out.println("Уравнение прямой 1: " + line1.getEquation());
+        System.out.println("Уравнение прямой 2: " + line2.getEquation());
+        System.out.println("Точка пересечения: " + line1.getIntersectionPoint(line2));
+    }
+  
     public static void streltsovaMethod()
     {
         System.out.println("Стрельцова");
