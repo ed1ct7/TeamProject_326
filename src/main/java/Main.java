@@ -4,6 +4,7 @@ import allclasses.petrenko.entities.SchoolWorkerEntity;
 import allclasses.petrenko.repository.PositionRepository;
 import allclasses.petrenko.repository.SchoolWorkerRepository;
 import allclasses.bartasevich.Toy;
+import allclasses.ponomaryova.Dogs;
 import allclasses.romanova.Book;
 import allclasses.poruchikov.Ships;
 import allclasses.kovalenko.Animal;
@@ -19,8 +20,12 @@ import allclasses.sadekov.E_ComponentSpecs;
 import allclasses.sadekov.E_ComponentTypes;
 import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
+import allclasses.skrypnikova.Square;
+import allclasses.kulikov.Parallelogram;
+import allclasses.chemyakina.Straight;
 
 import allclasses.kulikov.Parallelogram;
+import allclasses.streltsova.CityManager;
 
 import java.util.Map;
 
@@ -31,6 +36,7 @@ public class Main {
         petrenko();
         tigranyanMethods();
         bartasevichMethod();
+        ponomaryova();
         poruchikovMethod();
         rozhinaMethod();
         kazakova();
@@ -38,9 +44,13 @@ public class Main {
         PaegleMethod();
         gulyaevMethod();
         sadekovMethod();
+        sadikovMethod();
         ezerskiyMethod();
         kulikovMethod();
         romanovaMethod();
+        skrypnikovaMethod();
+        chemyakinaMethod();
+        streltsovaMethod();
     }
 
     public static void tigranyanMethods(){
@@ -50,6 +60,7 @@ public class Main {
         for (Notes note : scale) {
             System.out.println(note.toString());
         }
+        // Comment
     }
 
     public  static  void petrenko()
@@ -106,6 +117,12 @@ public class Main {
 
     }
 
+    public static void ponomaryova() {
+        Dogs dog = new Dogs("Джек рассел терьер", 2018, "Фунтик");
+        System.out.println("\nПономарёва, " + dog.showDog());
+        System.out.println(dog.howAge());
+    }
+  
     public static void poruchikovMethod() {
         System.out.println("\n~~~~~\nПоручиков");
         Ships ship = new Ships("Титаник", "Пассажирский", 1912, 52310.0);
@@ -119,8 +136,10 @@ public class Main {
     public static void sadikovMethod(){
         Apple apple = new Apple("красное", 200.0, true, "Гала", 8.5);
         Apple apple2 = new Apple();
+        System.out.print("\n+++++++++++++++++++++++++++++++++++++\n");
         System.out.println(apple.toString());
         System.out.println(apple2.toString());
+        System.out.print("+++++++++++++++++++++++++++++++++++++");
     }
 
     public static void rozhinaMethod() {
@@ -147,8 +166,9 @@ public class Main {
     public static void kazakova(){
         Coffee coffee = new Coffee("Раф", 1);
         System.out.println("\nКазакова, "+ coffee.getCoffee());
-    }
 
+
+        System.out.println("\nКазакова, "+ coffee.getCoffee());}
     public static void buldakovMethod() {
         Vector vec1 = new Vector();
         Vector vec2 = new Vector(1.5,2);
@@ -172,11 +192,13 @@ public class Main {
         component1.PrintSpecsInfo();
         System.out.print(component1.CalculateFreeMemory(2047));
         System.out.print("\n");
-        System.out.print(component1.GetRublePrice());
-        System.out.print("=================================");
+        System.out.println(component1.GetRublePrice());
+        System.out.println("=================================");
     }
 
     public  static  void ezerskiyMethod(){
+        System.out.println();
+
         SchoolRepository SchoolRep = new SchoolRepository();
         SchoolRep.getSchool().setName("Школа №445");
         SchoolRep.getSchool().setAddress("ул. Строителей 16");
@@ -198,6 +220,8 @@ public class Main {
         {
             System.out.println(contact);
         }
+
+        System.out.println();
     }
 
     public static void PaegleMethod()
@@ -230,5 +254,58 @@ public class Main {
         int perimeter = rec1.Perimeter();
         System.out.println("Площадь прямоугольника: " + square1);
         System.out.println("Периметр треугольника: " + perimeter);
+    }
+
+    public static void skrypnikovaMethod() {
+        Square square = new Square(7);
+        System.out.println("Квадрат со стороной: " + 7);
+        System.out.println("Площадь: " + square.area());
+        System.out.println("Периметр: " + square.perimeter());
+        System.out.println("Диагональ: " + String.format("%.4f", square.diagonal()));
+    }
+
+    public static void chemyakinaMethod() {
+        Straight line1 = new Straight(2, 3);
+        Straight line2 = new Straight(-1, 5);
+
+        System.out.println("Уравнение прямой 1: " + line1.getEquation());
+        System.out.println("Уравнение прямой 2: " + line2.getEquation());
+        System.out.println("Точка пересечения: " + line1.getIntersectionPoint(line2));
+    }
+  
+    public static void streltsovaMethod()
+    {
+        System.out.println("Стрельцова");
+        CityManager cityManager = new CityManager();
+        System.out.println("\nДобавляем города");
+        cityManager.addCity("Москва");
+        cityManager.addCity("Санкт-Петербург");
+        cityManager.addCity("Казань");
+        cityManager.addCity("Новосибирск");
+
+        boolean added = cityManager.addCity("Москва");
+        System.out.println("Москва добавлена повторно: " + added);
+
+        System.out.println("\nСписок городов:");
+        for (String city : cityManager.getAllCities()) {
+            System.out.println("- " + city);
+        }
+
+        System.out.println("Всего городов: " + cityManager.getCitiesCount());
+        System.out.println("Добавлено городов: " + cityManager.getAddedCitiesCount());
+
+        System.out.println("\nПроверка наличия городов:");
+        System.out.println("Есть ли Сочи: " + cityManager.containsCity("Сочи"));
+        System.out.println("Есть ли Казань: " + cityManager.containsCity("Казань"));
+
+        System.out.println("\nУдаляем Казань:");
+        boolean removed = cityManager.removeCity("Казань");
+        System.out.println("Казань удалена: " + removed);
+        System.out.println("Городов осталось: " + cityManager.getCitiesCount());
+
+        System.out.println("\nОчищаем список городов:");
+        cityManager.clearCities();
+        System.out.println("Список пуст: " + cityManager.isEmpty());
+        System.out.println("Городов: " + cityManager.getCitiesCount());
     }
 }

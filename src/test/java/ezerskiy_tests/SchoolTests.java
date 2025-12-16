@@ -3,6 +3,9 @@ package ezerskiy_tests;
 import allclasses.ezerskiy.entity.SchoolEntity;
 import allclasses.ezerskiy.repository.SchoolRepository;
 import static org.junit.Assert.*;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,6 +23,8 @@ public class SchoolTests
     }
 
     @Test
+    @DisplayName("Проверка изменения имени школы")
+    @Description("Изменения имени школы через константу и метод класса репозитория")
     public  void ChangeSchoolName_Test()
     {
         String newName = "School №12";
@@ -28,6 +33,8 @@ public class SchoolTests
     }
 
     @Test
+    @DisplayName("Проверка добавления контакта школы")
+    @Description ("Добавления двух контактных номеров к пустому списку контактов школы")
     public void AddContact_Test()
     {
         String newContact1 = "+7 999 000 99 00";
@@ -42,6 +49,8 @@ public class SchoolTests
     }
 
     @Test
+    @DisplayName("Проверка получение полного имени школы с адресом")
+    @Description ("Получение полного имени школы с адресом с помощью метода репозитория")
     public void GetSchoolFullNameAddress_Test()
     {
         String Name = "School";
