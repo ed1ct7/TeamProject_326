@@ -22,6 +22,7 @@ import allclasses.paegle.Chocolate;
 import allclasses.gulyaev.Rectangle;
 
 import allclasses.kulikov.Parallelogram;
+import allclasses.streltsova.CityManager;
 
 import java.util.Map;
 
@@ -44,6 +45,7 @@ public class Main {
         ezerskiyMethod();
         kulikovMethod();
         romanovaMethod();
+        streltsovaMethod();
     }
 
     public static void tigranyanMethods(){
@@ -247,5 +249,40 @@ public class Main {
         int perimeter = rec1.Perimeter();
         System.out.println("Площадь прямоугольника: " + square1);
         System.out.println("Периметр треугольника: " + perimeter);
+    }
+    public static void streltsovaMethod()
+    {
+        System.out.println("Стрельцова");
+        CityManager cityManager = new CityManager();
+        System.out.println("\nДобавляем города");
+        cityManager.addCity("Москва");
+        cityManager.addCity("Санкт-Петербург");
+        cityManager.addCity("Казань");
+        cityManager.addCity("Новосибирск");
+
+        boolean added = cityManager.addCity("Москва");
+        System.out.println("Москва добавлена повторно: " + added);
+
+        System.out.println("\nСписок городов:");
+        for (String city : cityManager.getAllCities()) {
+            System.out.println("- " + city);
+        }
+
+        System.out.println("Всего городов: " + cityManager.getCitiesCount());
+        System.out.println("Добавлено городов: " + cityManager.getAddedCitiesCount());
+
+        System.out.println("\nПроверка наличия городов:");
+        System.out.println("Есть ли Сочи: " + cityManager.containsCity("Сочи"));
+        System.out.println("Есть ли Казань: " + cityManager.containsCity("Казань"));
+
+        System.out.println("\nУдаляем Казань:");
+        boolean removed = cityManager.removeCity("Казань");
+        System.out.println("Казань удалена: " + removed);
+        System.out.println("Городов осталось: " + cityManager.getCitiesCount());
+
+        System.out.println("\nОчищаем список городов:");
+        cityManager.clearCities();
+        System.out.println("Список пуст: " + cityManager.isEmpty());
+        System.out.println("Городов: " + cityManager.getCitiesCount());
     }
 }
